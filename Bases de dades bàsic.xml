@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://docbook.org/xml/4.5/docbookx.dtd">
+<article>
+    <title>Bases de dades</title>
+    <sect1>
+        <title>Base de dades</title>
+        
+        <para>Una base de dades és un conjunt de dades segons una estructura coherent i accessibles des d'un o més programes o aplicacions, de manera que qualsevol d'aquestes dades pot ésser extreta del conjunt i actualitzada, sense afectar ni l'estructura del conjunt ni les altres dades</para>
+        <para><emphasis role="bold">Veure la versio</emphasis></para>
+        <para>status;</para>
+        <para><inlinegraphic fileref="img/0008.png"/></para>
+        <para><emphasis role="bold">Crear base de dades</emphasis></para>
+        <para>create database nomBaseDades.</para>
+        <para><inlinegraphic fileref="img/0001.png"/></para>
+        <para><inlinegraphic fileref="img/0002.png"/></para>
+        <para><emphasis role="bold">Veure base de dades que hi ha:</emphasis></para>
+        <para>show database;</para>
+        <para><inlinegraphic fileref="img/0003.png"/></para>
+        <para><emphasis role="bold">Utilitzar una base de dades en concret</emphasis></para>
+        <para>use nomBaseDeDades;</para>
+        <para><inlinegraphic fileref="img/0004.png"/></para>
+        <para><emphasis role="bold">Per veure les taules que hi ha en una base de
+            dades</emphasis></para>
+        <para>show tables</para>
+        <para><inlinegraphic fileref="img/0005.png"/></para>
+        <para><emphasis role="bold">Esborrar una base de dades</emphasis>
+        </para>
+        <para>drop database nomBaseDades.</para>
+        <para><inlinegraphic fileref="img/0006.png"/></para>
+        <para><inlinegraphic fileref="img/0007.png"/></para>
+        <para><emphasis role="bold">Tipus de dades String</emphasis></para>
+        <para>CHAR → Especifica una cadena de longitud fixa (indicada per llargada) i, per tant,
+            MySQL assegura que tots els valors emmagatzemats en la columna tenen la longitud
+            especificada. Si s'hi insereix una cadena de longitud més curta, MySQL l'emplena amb
+            espais en blanc fins a la llargada indicada. Si s'intenta inserir-hi una cadena de
+            longitud més llarga, es trunca </para>
+        <para>VARCHAR → Aquest tipus especifica una cadena de longitud variable que pot ser, com a
+            màxim, la indicada per llargada, valor que és obligatori introduir. S'emmagatzemarà el
+            valor exacte que indica l'usuari, sense afegri-hi espais en blanc. Si s'intenta
+            inserir-hi una cadena de longitud més llarga, Varchar retorna un error. La llargada
+            màxima és de 65535</para>
+        <para>BINARY → És similar al tipus CHAR, però emmagatzema caràcters en binari. En aquest
+            cas, la llargada sempre s'indica en bytes. La llargada mínima per una columna BINARY és
+            d'1 byte. La llargada màxima permesa és de 255.</para>
+        <para>VARBINARY → El tipus de dada VARBINARY és similar al tipus VARCHAR, però emmagatzema
+            caràcters en binari. En aquest cas, la llargada sempre s'indica en bytes. Els bytes que
+            no s'emplenen explícitament s'emplenen '@IOCCONTENT@' ex VARBINARY (4) s'assigna valor
+            'a' contindrà realment 'a@IOCCONTENT@@IOCCONTENT@@IOCCONTENT@'. El valor '@IOCCONTENT@'
+            en hexadecimal correspon amb 0x00.</para>
+        <para>BLOB → És un obecte que permet contenir una quantitat gran I variable de dades de
+            tipus binari. (TINYBLOB, BLOB, MEDIUMBLOB i LONGBLOB son subtipus de BLOB).</para>
+        <para>TEXT → És un obecte que permet contenir una quantitat gran I variable de dades de
+            tipus caràcter. (TINYTEXT, MEDIUMTEXT i LONGTEXT son subtipus de TEXT)</para>
+        <para>ENUM → Defineix un conjunt de valors de tipus string amb una llista prefixada de
+            cadenes que es defineixen en el moment de la definició de la columna I que es
+            correspondran amb el valors vàlids de la columna.</para>
+        <para>SET → Pot contenir zero o més valors, però en tots els elements que contingui han de
+            pertànyer a una llista especificada en el moment de la creació. El nombre màxim de
+            valors diferents que pot suportar el tipus SET és 64.</para>
+        <para><emphasis role="bold">Tipus de dades numèriques</emphasis></para>
+        <para>INTEGER → S'abreuja com a INT,  Emmagatzema valors enters, admeten l'especificació del
+            nombre de dígits que cal mostrar d'un valor concret (sintaxi = INT (N)) així que INT
+            (4), en el moment de seleccionar un valor concret, es postraràn tant sols 4 dígits. Cal
+            tenir en compte que aquesta especificació no condiciona el valor emmagatzemat, tan sols
+            fixa el vaor que cal mostrar.</para>
+        <para>DECIMAL → és un tipus de dada real de punt fix que admet MySQL. és sínonim amb
+            NUMERIC. permeten especificar el total de dígits (T) I la quantitat de dígits decimals
+            (D), amb la sintàxi següent: DECIMAL (T,D) i NUMERIC (T,D).</para>
+        <para>FLOAT → emmagatzemen valors numèrics reals (admeten decimals), Aquest tipus
+            s'emmagatzemma en 4 bytes. admeten que s'especifiqui els dígits de la part entera (E) I
+            els dígits de la part decimal (D) la síntàxis per aquesta especificació seria FLOAT
+            (E,D).</para>
+        <para>REAL → emmagatzemen valors numèrics reals (admeten decimals), Aquest tipus
+            s'emmagatzemma en 4 bytes. la síntàxis per aquesta especificació seria REAL
+            (E,D).</para>
+        <para>DOUBLE PRECISION (DOUBLE O REAL) → emmagatzemen valors numèrics reals (admeten
+            decimals), Aquest tipus s'emmagatzemma en 8 bytes. la síntàxis per aquesta especificació
+            seria  DOUBLE PRECISION (E,D).</para>
+        <para>BIT →  permet emmagatzemar bits 1 a 64. PEr especificar el nombre de bits que
+            emmagatzemarà cal definir-lo, seguint la sintaxi següent: BIT (M) on M serà el nombre de
+            bits que s'emmagatzemaran. BIT és sinònim de TINYINT.</para>
+        <para>BOOLEAN → o BOOL permet emmagatzemar tipus de dades booleanes 0 es considera fals i 1
+            es considera cert</para>
+        <para>Modificadors → quan s'afegeixen a la definicio d'una columna numèrica (entera o real)
+            condiciona l'estructura que el contindrà. UNSIGNED: amb aquest modificador tan sols
+            s'admetran els valors de tipus numèric no negatius. ZEROFILL: s'hi afegiran  zeros a
+            l'esquerra fins a completar el total de dígits del valor numèric, si cal.
+            AUTO_INCREMENT: quan s'afegeix un valor o NULL en aquella columna, el valor que s'hi
+            emmagatzema és el valor més alt incrementat en 1. El primer valor per defecte és
+            1.</para>
+        <para><emphasis role="bold">tipus de dades per a moments temporals</emphasis></para>
+        <para>DATETIME → permet emmagatzemar combinacions de dies i hores. El format DATETIME en
+            MySQL és 'AAAA-MM-DD HH:MM:SS', en què AAAA-MMM-DD és l'any, el mes i el dia i HH:MM
+            indiquen l'hora, minut I segon expressats en dos dígits, separats per ':' rang DATETIME
+            '1000-01-01 00:00:00' fins a '9999-12-31 23:59:59'</para>
+        <para>DATE → permet emmagatzemar dates. el format d'una data en MySQL és 'AAAA-MM-DD' en què
+            AAAA indica l'any expressat en quatre dígits, MM indica el mes expressat en dos dígits i
+            DD indica el dia expressat en dos dígits. rang DATE '1000-01-01 00:00:00' fins a
+            '9999-12-31 23:59:59'</para>
+        <para>TIMESTAMP → és un tipus de dada similar a DATETIME I té el mateix format per defecte
+            però permet emmagatzemar l'hora I data actuals en un moment determinat el rang de valor
+            que admet TIMESTAMP ñes de '1970-01-01 00:00:01' a '2038-01-19 03:14:07'</para>
+        <para>TIME → és un tipus de dada específic que emmagatzema l’hora en el format ‘HH:MM:SS’.
+            També permet expressar el temps transcorregut entre dos  moments (diferència de temps).
+            Per això, els valors que permet emmagatzemar són de '-838:59:59’ a ‘838:59:59’. En
+            aquesta cas, el format serà ‘HHH:MM:SS’. '-838:59:59’ a ‘838:59:59’. En aquesta cas, el
+            format serà ‘HHH:MM:SS’. </para>
+        <para>YEAR → és una dada de tipus <code>BYTE</code> que emmagatzema dades de tipus any. El
+            format per defecte és AAAA (l’any expressat en quatre dígits) o bé ‘AAAA’, expressat com
+            a <emphasis role="italic">string</emphasis>. S’admeten valors des de 1901 fin a 2155.
+            També s’admet 0000. En el format de dos dígits, s’admeten els valors del 70 al 69, que
+            representen els anys del 1970 al 2069.</para>
+        <para><emphasis role="bold">Crear taules</emphasis></para>
+        <para><inlinegraphic fileref="img/0009.png"/></para>
+        <para>desc nom taula descriu la taula </para>
+        <para><inlinegraphic fileref="img/0010.png"/></para>
+    </sect1>
+</article>

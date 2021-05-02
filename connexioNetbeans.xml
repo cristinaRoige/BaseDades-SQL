@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://docbook.org/xml/4.5/docbookx.dtd">
+<article>
+    <title>Crear una connexió de base de dades amb netbeans</title>
+    <sect1>
+        <title>Crear un usuari</title>
+        <para>Crearem un usuari amb phpMyAdmin, anirem a la pestanya "cuentas de usuarios" i
+            clicarem a "Agregar cuenta de usuario".</para>
+        <para>Nombre de usuario → administrador.</para>
+        <para> Nombre del host → local → localhost</para>
+        <para>Contrasenya → administrador</para>
+        <para>Debe volver a escribir → administrador</para>
+        <para>Marcarem el checkbox → Otorgar todos los privilegios al nombre que contiene comodín
+            (username\_%).</para>
+        <para>Privilegios globales → seleccionar todos.</para>
+        <para>Clicarem a continuar i s'ens crearà el nou usuari.</para>
+    </sect1>
+    <sect1>
+        <title>Crear la connexió a Netbeans.</title>
+        <para>Obrirem Netbeans clicarem a Services → Databases Clicarem el botó dret i clicarem a
+            New connection.</para>
+        <para><inlinegraphic fileref="img/00001.png"/></para>
+        <para>Seleccionarem un driver de qualsevol servidor de base de dades que tinguem instal·lat
+            i clicarem a next.</para>
+        <para><inlinegraphic fileref="img/00002.png"/></para>
+        <para>Seleccionarem el servidor en el nostre cas localhost, el port en el nostre cas 3306,
+            Database en el nostre cas blog_exemple, User name en el nostre cas administrador,
+            password en el nostre cas administrador. Clicarem que recordi la contrasenya i farem un
+            text de connexió. Clicarem a Finish.</para>
+        <para>Veurem la connexió de la base de dades i les taules.</para>
+        <para><inlinegraphic fileref="img/00003.png"/></para>
+        <para>A partir d'aquí ja la podrem manipular per exemple posant-nos a sobre una taula
+            clicant amb el botó dret view data.</para>
+    </sect1>
+</article>
